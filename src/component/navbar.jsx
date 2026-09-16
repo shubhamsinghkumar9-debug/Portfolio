@@ -31,7 +31,7 @@ export default function Navbar({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close modal with Escape key
+
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape") {

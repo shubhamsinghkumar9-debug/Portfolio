@@ -5,6 +5,7 @@ import Developer from "./component/developer/developer"
 import Academic from "./component/about/Academic"
 import Layout from "./component/layout/layout";
 import GymLanding from "./component/gym/Landing";
+import Project from "./component/project/Project";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -19,7 +20,7 @@ function Home() {
         links={[
           { label: "About", href: "/about" },
           { label: "Academic", href: "/about/academic" },
-          { label: "Projects", href: "#projects" },
+          { label: "Projects", href: "/project" },
         ]}
         cta={{ label: "Hire Me", href: "/contact" }}
       />
@@ -57,6 +58,15 @@ function App() {
             <GymLanding />
           </Layout>
         }
+      />
+
+      <Route
+      path="/project"
+      element={
+        <Layout>
+          <Project/>
+        </Layout>
+      }
       />
     </Routes>
 

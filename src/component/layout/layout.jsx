@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         links={[
           { label: "About", href: "/about" },
           { label: "Academic", href: "/about/academic" },
-          { label: "Projects", href: "#projects" },
+          { label: "Projects", href: "/project" },
         ]}
         cta={{ label: "Hire Me", href: "#contact" }}
       />
