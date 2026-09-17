@@ -6,6 +6,7 @@ import Academic from "./component/about/Academic"
 import Layout from "./component/layout/layout";
 import GymLanding from "./component/gym/Landing";
 import Project from "./component/project/Project";
+import SkillsZoneProject from "./component/project/projects/SkillsZoneProject"
 
 import { Routes, Route } from "react-router-dom";
 
@@ -37,8 +38,8 @@ function App() {
       <Route path="/" element={<Home />} />
 
       <Route path="/about">
-        <Route index element={<Layout> <About /> </Layout>}/>
-        <Route path="academic" element={<Layout> <Academic /> </Layout>}/>
+        <Route index element={<Layout> <About /> </Layout>} />
+        <Route path="academic" element={<Layout> <Academic /> </Layout>} />
       </Route>
 
       <Route
@@ -51,23 +52,51 @@ function App() {
       />
 
 
+      <Route path="/project">
+        <Route
+          index
+          element={
+            <Layout>
+              <Project />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="skillzonesacademy"
+          element={
+            <Layout>
+              <SkillsZoneProject />
+            </Layout>
+          }
+        />
+      </Route>
+
+
+
       <Route
         path="/gym"
         element={
-          <Layout>
+          <>
+            <Navbar
+              logo="GYM"
+              links={[
+                { label: "3D-Model", href: "/gym/3d-Model" },
+                { label: "Transformation", href: "/gym/Transformation" },
+                { label: "Blog", href: "/gym/Blog" },
+              ]}
+              cta={{ label: "Contract", href: "/contact" }}
+            />
+
             <GymLanding />
-          </Layout>
+          </>
         }
       />
 
-      <Route
-      path="/project"
-      element={
-        <Layout>
-          <Project/>
-        </Layout>
-      }
-      />
+
+
+
+
     </Routes>
 
   );

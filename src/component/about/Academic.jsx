@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollArrow from '../button/ScrollArrow';
 
 const Academic = () => {
   const education = [
@@ -17,7 +18,7 @@ const Academic = () => {
       level: "02",
       title: "Secondary Education",
       subtitle: "School Education",
-      institution:  "S S Dev Public School",
+      institution: "S S Dev Public School",
       location: "Zamania, Ghazipur, Uttar Pradesh",
       duration: "2021 - 2023",
       description:
@@ -136,6 +137,22 @@ const Academic = () => {
           </p>
         </div>
       </div>
+      <div
+        className="
+    fixed
+    bottom-6
+    right-5
+    z-[9999]
+
+    sm:bottom-8
+    sm:right-8
+
+    md:bottom-10
+    md:right-10
+  "
+      >
+        <ScrollArrow to="/project" />
+      </div>
     </section>
   );
 };
@@ -232,6 +249,8 @@ const EducationCard = ({ item }) => {
         "
       />
     </div>
+
+
   );
 };
 

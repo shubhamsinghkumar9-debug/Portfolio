@@ -291,6 +291,7 @@ const Portfolio = () => {
             </div>
           ))}
         </div>
+
         <div
           className="
     fixed
@@ -307,6 +308,7 @@ const Portfolio = () => {
         >
           <ScrollArrow to="/about/academic" />
         </div>
+        
       </section>
 
     </div>

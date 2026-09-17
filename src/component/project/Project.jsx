@@ -1,7 +1,8 @@
 import React from "react";
 import { ExternalLink, ArrowUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-import ecommerce from "../../assets/body.png";
+import SkillsZoneAcademy from "../../assets/Skills-Zone-Academy.png";
 import taskApp from "../../assets/body.png";
 import socialDashboard from "../../assets/body.png";
 import weather from "../../assets/body.png";
@@ -10,62 +11,20 @@ import collaboration from "../../assets/body.png";
 
 const projects = [
     {
-        title: "E-commerce Platform",
+        title: "Skills-Zone-Academy",
         description:
-            "A full-featured e-commerce platform built with React, Node.js, and MongoDB.",
-        image: ecommerce,
-        technologies: ["React", "Node.js", "MongoDB"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/ecommerce",
+            "A full-featured platform for excelling in competitive exams.",
+        image: SkillsZoneAcademy,
+        technologies: ["React", "TailwindCss", "Python", "MongoDB"],
+        live: "https://skill-zone-academy.vercel.app/",
+        github: "https://github.com/shubhamsinghkumar9-debug/SKills_Zone_Academy",
+        projectLink: "/project/skillzonesacademy",
     },
-    {
-        title: "Task Management App",
-        description:
-            "A productivity app for managing tasks with drag-and-drop functionality.",
-        image: taskApp,
-        technologies: ["React", "Firebase", "TailwindCSS"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/task-app",
-    },
-    {
-        title: "Social Media Dashboard",
-        description:
-            "Analytics dashboard for social media metrics with real-time updates.",
-        image: socialDashboard,
-        technologies: ["Next.js", "Chart.js", "TypeScript"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/social-dashboard",
-    },
-    {
-        title: "Weather Application",
-        description:
-            "Real-time weather forecasting app with location detection.",
-        image: weather,
-        technologies: ["JavaScript", "API", "CSS3"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/weather-app",
-    },
-    {
-        title: "Portfolio Website",
-        description:
-            "A responsive portfolio website built with modern design principles.",
-        image: portfolio,
-        technologies: ["HTML5", "CSS3", "JavaScript"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/portfolio",
-    },
-    {
-        title: "Team Collaboration App",
-        description:
-            "Real-time collaboration tool for remote teams with chat functionality.",
-        image: collaboration,
-        technologies: ["React", "Socket.io", "MongoDB"],
-        live: "https://your-live-demo.com",
-        github: "https://github.com/yourusername/collaboration",
-    },
+
 ];
 
 const Project = () => {
+    const navigate = useNavigate();
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -89,7 +48,7 @@ const Project = () => {
         lg:px-12
       "
         >
-            {/* Background glow */}
+
             <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div
                     className="
@@ -162,6 +121,7 @@ const Project = () => {
                     {projects.map((project, index) => (
                         <article
                             key={index}
+                            onClick={() => navigate(project.projectLink)}
                             className="
                 group
                 overflow-hidden
@@ -177,7 +137,7 @@ const Project = () => {
                 hover:shadow-[0_15px_45px_rgba(0,0,0,0.4)]
               "
                         >
-                            {/* Project Image */}
+
                             <div className="relative h-[145px] overflow-hidden">
                                 <img
                                     src={project.image}
@@ -192,7 +152,7 @@ const Project = () => {
                   "
                                 />
 
-                                {/* Image overlay */}
+
                                 <div
                                     className="
                     absolute
@@ -204,7 +164,7 @@ const Project = () => {
                                 />
                             </div>
 
-                            {/* Card Content */}
+
                             <div className="p-5">
                                 <h3
                                     className="
